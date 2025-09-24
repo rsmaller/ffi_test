@@ -1,0 +1,4 @@
+cmake_minimum_required(VERSION 3.10.0)
+project(sort)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
+add_library(sort SHARED src/sort.c)

@@ -1,0 +1,1 @@
+void mergeSort(int *array1, int sizeTotal);
