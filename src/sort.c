@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -26,7 +27,6 @@ static void merge(int *array1, int *array2, int size1, int size2) { // shuffles 
     }
     memcpy(array1, internalArray, totalSize * sizeof(int));
     free(internalArray);
-    return;
 }
 
 void mergeSort(int *array1, int sizeTotal) {
@@ -38,5 +38,14 @@ void mergeSort(int *array1, int sizeTotal) {
     mergeSort(array1, size1);
     mergeSort(array2, size2);
     merge(array1, array2, size1, size2);
-    return;
+}
+
+void outval(int *out) {
+    *out = 5;
+}
+
+void printArgv(int argc, char **argv) {
+    for (int i = 0; i < argc; i++) {
+        printf("argv[%d] = %s\n", i, argv[i]);
+    }
 }

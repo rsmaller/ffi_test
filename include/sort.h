@@ -1,1 +1,3 @@
 void mergeSort(int *array1, int sizeTotal);
+
+void outval(int *out);
