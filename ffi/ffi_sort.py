@@ -8,7 +8,7 @@ elif platform.system() == "Windows":
 else:
     extension = ".so"
 
-libsort = ctypes.CDLL("../bin/libsort" + extension)
+libsort = ctypes.CDLL("libsort" + extension)
 libsort.mergeSort.argtypes = [ctypes.POINTER(ctypes.c_int), ctypes.c_int]
 libsort.outval.argtypes = [ctypes.POINTER(ctypes.c_int)]
 libsort.printArgv.argtypes = [ctypes.c_int, ctypes.POINTER(ctypes.c_char_p)]

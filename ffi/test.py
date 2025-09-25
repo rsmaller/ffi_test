@@ -1,10 +1,11 @@
-from ffi_sort import *
+#!/usr/bin/python3
 import ctypes
 import sys
 import os
-os.environ['TERM'] = 'dumb'
+from ffi_sort import *
 
 myList = [4, 3, 2, 1]
+print("DIR: ", os.getcwd())
 print(f"My list: {myList}")
 myList = pyMergeSort(myList)
 print(f"After sort: {myList}")

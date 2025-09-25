@@ -61,3 +61,4 @@ CMakeCache.txt
 Makefile
 /bin
 .idea/
+__pycache__
