@@ -1,5 +1,6 @@
 import ctypes
 import platform
+import os
 
 if platform.system() == "Darwin":
     extension = ".dylib"
@@ -8,7 +9,8 @@ elif platform.system() == "Windows":
 else:
     extension = ".so"
 
-libsort = ctypes.CDLL("libsort" + extension)
+FFI_SOURCE_DIR = os.path.dirname(__file__)
+libsort = ctypes.CDLL(FFI_SOURCE_DIR + "/../bin/libsort" + extension)
 libsort.mergeSort.argtypes = [ctypes.POINTER(ctypes.c_int), ctypes.c_int]
 libsort.outval.argtypes = [ctypes.POINTER(ctypes.c_int)]
 libsort.printArgv.argtypes = [ctypes.c_int, ctypes.POINTER(ctypes.c_char_p)]
